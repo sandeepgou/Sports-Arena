@@ -1,4 +1,4 @@
-/*
+
 package com.stackroute.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,4 +11,4 @@ public class WebappController {
         return "index.html";
     }
 }
-*/
+
