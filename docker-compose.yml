@@ -4,14 +4,14 @@ services:
     image: mongo:latest
     container_name: mongo-container
     hostname: localhost
-    network_mode: host
+    
     ports:
       - 27017:27017
 
   mysql:
     image: mysql:latest
     hostname: localhost
-    network_mode: host
+    
     ports:
       - 3306:3306
     container_name: mysqlcontainer
@@ -39,7 +39,7 @@ services:
     container_name: config-server
     build: config-server/
     hostname: localhost
-    network_mode: host
+    
     ports:
       - 8888:8888
     restart: always
@@ -48,7 +48,7 @@ services:
     container_name: eureka-server
     build: eureka-server/
     hostname: localhost
-    network_mode: host
+    
     # depends_on:
       # - config-server
     ports:
