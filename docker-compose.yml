@@ -26,7 +26,7 @@ services:
     container_name: product-webapp
     build: product-webapp/
     hostname: localhost
-    network_mode: host
+    
     depends_on:
       # - config-server
       - eureka-server
@@ -60,7 +60,7 @@ services:
     build: api-gateway/
     restart: always
     hostname: localhost
-    network_mode: host
+    
     depends_on:
       - eureka-server
       # - config-server
@@ -72,7 +72,7 @@ services:
     container_name: payment
     build: payment/
     hostname: localhost
-    network_mode: host
+    
     depends_on:
       - eureka-server
       # - config-server
@@ -86,7 +86,7 @@ services:
     container_name: bookings-management
     build: bookings-management/
     hostname: localhost
-    network_mode: host
+    
     ports:
       - 8087:8087
     depends_on:
@@ -101,7 +101,7 @@ services:
     container_name: authentication-service
     build: authentication-service/
     hostname: localhost
-    network_mode: host
+    
     ports:
       - 8095:8095
     depends_on:
@@ -117,7 +117,7 @@ services:
     container_name: chat-service
     build: chat-service/
     hostname: localhost
-    network_mode: host
+    
     ports:
       - 8086:8086
     depends_on:
@@ -130,7 +130,7 @@ services:
     container_name: email-service
     build: email-service/
     hostname: localhost
-    network_mode: host
+    
     ports:
       - 8085:8085
     depends_on:
@@ -145,7 +145,7 @@ services:
     container_name: team-up
     build: team-up/
     hostname: localhost
-    network_mode: host
+    
     ports:
       - 8082:8082
     depends_on:
@@ -160,7 +160,7 @@ services:
     container_name: user-service
     build: user-service/
     hostname: localhost
-    network_mode: host
+    
     ports:
       - 8081:8081
     depends_on:
