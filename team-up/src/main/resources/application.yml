@@ -1,0 +1,30 @@
+server:
+  port: 8082
+  
+spring:
+  application:
+    name: team-up
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: TeamupDB
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  service-url:
+    defaultZone: http://localhost8761/eureka  
+
+
+# spring:
+#   application:
+#     name: team-up
+#   cloud:
+#     config:
+#       uri: http://localhost:8888
+#       import-check:
+#         enabled: false
+#     mangement:
+#       security:
+#         enabled: false

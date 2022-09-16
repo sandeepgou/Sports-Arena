@@ -1,0 +1,51 @@
+[
+    {
+      "ownerEmail": "jeanne@gmail.com",
+      "groundID": "",
+      "groundName": "Gandhibaugh",
+      "groundType": "1",
+      "addressLineOne": "Lokmat sq.",
+      "addressLineTwo": "",
+      "city": "Nagpur",
+      "pincode": "",
+      "ameneties": "1",
+      "groundPicture": "C:\\fakepath\\WhatsApp Image 2022-07-01 at 6.27.00 PM.jpeg",
+      "phoneNumber": "",
+      "password": "jeanne123",
+      "role": "vendors",
+      "id": 1,
+      "state": "Maharashtra"
+    },
+    {
+      "ownerEmail": "test@gmail.com",
+      "groundID": "",
+      "groundName": "",
+      "groundType": "",
+      "addressLineOne": "",
+      "addressLineTwo": "",
+      "city": "",
+      "pincode": "",
+      "ameneties": "",
+      "groundPicture": "",
+      "phoneNumber": "",
+      "password": "test123",
+      "role": "vendors",
+      "id": 2
+    },
+    {
+      "ownerEmail": "sayali1604meshram@gmail.com",
+      "groundID": "",
+      "groundName": "",
+      "groundType": "",
+      "addressLineOne": "",
+      "addressLineTwo": "",
+      "city": "",
+      "pincode": "",
+      "ameneties": "",
+      "groundPicture": "",
+      "phoneNumber": "",
+      "password": "1234",
+      "role": "vendors",
+      "id": 3
+    }
+  ]

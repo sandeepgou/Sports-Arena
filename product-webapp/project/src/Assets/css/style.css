@@ -1,0 +1,42 @@
+.header-background{
+    background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+   }
+   .main-footer {
+    color: white;
+    background-color: black;
+    /* padding-top: 2em; */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+   
+   /*********************For Ground Details Page********************************/
+.vendor-background{
+    background-image:url('../images/ground.jpg');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+
+} 
+/*********************End Ground Details Page********************************/  
+
+.edit-player{
+    background-image:url('../images/edit_player.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+
+}
+/********************Booking List View*************/
+.outer-div{
+    border:1px solid #e6e6e6;
+    border-radius:10px;
+    box-shadow: 5px 5px 5px 5px #e6e6e6;
+}
+.outer-div .address{
+  white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+ }

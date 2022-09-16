@@ -1,0 +1,27 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: email-service
+  mail:
+    id: sportsarenaemailservice@gmail.com
+    password: hrcrvkrrowwusfcz
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  service-url:
+    defaultZone: http://localhost8761/eureka
+
+# spring:
+#   application:
+#     name: email-service
+#   cloud:
+#     config:
+#       uri: http://localhost:8888
+#       import-check:
+#         enabled: false
+#     mangement:
+#       security:
+#         enabled: false

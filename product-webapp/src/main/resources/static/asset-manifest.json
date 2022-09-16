@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e9ef3d93.css",
+    "main.js": "/static/js/main.d21286a5.js",
+    "static/js/291.acc63f32.chunk.js": "/static/js/291.acc63f32.chunk.js",
+    "static/js/303.e754e394.chunk.js": "/static/js/303.e754e394.chunk.js",
+    "static/js/717.84492fbc.chunk.js": "/static/js/717.84492fbc.chunk.js",
+    "static/js/829.da7ff079.chunk.js": "/static/js/829.da7ff079.chunk.js",
+    "static/js/787.ec704a7a.chunk.js": "/static/js/787.ec704a7a.chunk.js",
+    "static/media/EmojiOneColor.woff2": "/static/media/EmojiOneColor.90ee5fb894c8d349bc54.woff2",
+    "static/media/edit_player.png": "/static/media/edit_player.4779e0a770b09d2717fa.png",
+    "static/media/sportslot.webp": "/static/media/sportslot.2595783cc0063fb499af.webp",
+    "static/media/NotoColorEmoji-flags.woff2": "/static/media/NotoColorEmoji-flags.148141acfb7ce6e4f383.woff2",
+    "static/media/ground.jpg": "/static/media/ground.edd8eeb5b4736a4e057c.jpg",
+    "static/media/signup.jpeg": "/static/media/signup.e84c98036ed3e0f62edf.jpeg",
+    "static/media/logo.jpeg": "/static/media/logo.a398fb30d9b27a269829.jpeg",
+    "index.html": "/index.html",
+    "main.e9ef3d93.css.map": "/static/css/main.e9ef3d93.css.map",
+    "main.d21286a5.js.map": "/static/js/main.d21286a5.js.map",
+    "291.acc63f32.chunk.js.map": "/static/js/291.acc63f32.chunk.js.map",
+    "303.e754e394.chunk.js.map": "/static/js/303.e754e394.chunk.js.map",
+    "717.84492fbc.chunk.js.map": "/static/js/717.84492fbc.chunk.js.map",
+    "829.da7ff079.chunk.js.map": "/static/js/829.da7ff079.chunk.js.map",
+    "787.ec704a7a.chunk.js.map": "/static/js/787.ec704a7a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9ef3d93.css",
+    "static/js/main.d21286a5.js"
+  ]
+}

@@ -1,0 +1,94 @@
+/* body {
+    background: rgb(2, 0, 36);
+    background: radial-gradient(
+      circle,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(30, 54, 59, 1) 0%,
+      rgba(93, 93, 116, 1) 100%
+    );
+  }
+  
+  .container {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+  }
+  .container > form {
+    width: 70%;
+    border: 1px solid #dfdfdf;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+  }
+  pre {
+    width: 70%;
+    color: #fff;
+    font-size: larger;
+  } */
+  input[type=radio]{
+    margin-left: 2rem;
+  }
+  button {
+    /* background: #0563b4 !important; */
+    color: white;
+    margin-right: 2rem;
+  }
+  .para {
+    color: red;
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+    
+  }
+  .slotimage {
+    background-image:url('../images/sportslot.webp');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+  }
+  .date-picker input {
+    width: 100%
+  }
+  /* .nav .nav-tabs .nav-item .nav-link {
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+  
+  .nav-tabs .nav-link.active {
+    border-bottom: solid 4px white !important;
+  } */
+  /* .containeritem {
+    border-style:dotted;
+    
+    justify-content: center;
+    padding-top: 2rem;
+    padding-left: 5rem;
+  } */
+  /* .listitem {
+    padding-top: 2rem;
+    padding-left: 2rem;
+  } */
+  .icon{
+    color: red;
+  }
+  /* .tab-background{
+    background-color:  lightseagreen;
+    color:white;
+  } */
+  /* .modalbox{
+    max-width: 900px;
+    width: 100%;
+    justify-content: center;
+    padding: auto;
+  } */
+  
+  

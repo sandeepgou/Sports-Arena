@@ -1,0 +1,112 @@
+server:
+  port: 8080
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  service-url:
+    defaultZone: http://localhost8761/eureka
+  
+
+spring:
+  main:
+    web-application-type: reactive
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+            exposedHeaders: "*"
+      routes:
+        #Route Mapping
+        - id: authentication-service
+          uri: http://localhost:8095/
+          predicates:
+            - Path=/authentication/**
+          filters:
+            - RewritePath=/authentication(?<segment>/?.*), $\{segment}
+
+            #Route Mapping
+        - id: bookings-management
+          uri: http://localhost:8087/
+          predicates:
+            - Path=/booking-Management/**
+          filters:
+            - RewritePath=/booking-Management(?<segment>/?.*), $\{segment}
+
+        #Route Mapping
+        - id: chat-service
+          uri: http://localhost:8086/
+          predicates:
+            - Path=/chat/**
+          filters:
+            - RewritePath=/chat(?<segment>/?.*), $\{segment}
+
+        #Route Mapping
+        - id: email-service
+          uri: http://localhost:8085/
+          predicates:
+            - Path=/email/**
+          filters:
+            - RewritePath=/email(?<segment>/?.*), $\{segment}
+
+
+        #Route Mapping
+        - id: payment
+          uri: http://localhost:8084/
+          predicates:
+            - Path=/payment/**
+          filters:
+            - RewritePath=/payment(?<segment>/?.*), $\{segment}
+
+        #Route Mapping
+        - id: team-up
+          uri: http://localhost:8082/
+          predicates:
+            - Path=/team/**
+          filters:
+            - RewritePath=/team(?<segment>/?.*), $\{segment}
+
+        #Route Mapping
+        - id: user-service
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/user/**
+          filters:
+            - RewritePath=/user(?<segment>/?.*), $\{segment}
+
+        #Route Mapping
+        - id: config-server
+          uri: http://localhost:8888/
+          predicates:
+            - Path=/config/**
+          filters:
+            - RewritePath=/config(?<segment>/?.*), $\{segment}
+
+
+        #Route Mapping
+        - id: product-webapp
+          uri: http://localhost:3000/
+          predicates:
+            - Path=/**
+          filters:
+            - RewritePath=(?<segment>/?.*), $\{segment}
+
+
+# spring:
+#   cloud:
+#     config:
+#       uri: http://localhost:8888
+#   application:
+#     name: api-gateway
+#   main:
+#     web-application-type: reactive
+# management:
+#   security:
+#     enabled: false
