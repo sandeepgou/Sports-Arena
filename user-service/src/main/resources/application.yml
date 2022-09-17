@@ -2,8 +2,8 @@ eureka:
   client: 
     fetch-registry: true
     register-with-eureka: true
-  service-url: 
-    defaultZone: "http://34.201.191.117:8761/eureka"
+    service-url: 
+      defaultZone: "http://34.201.191.117:8761/eureka"
 server: 
   port: 8081
 spring:
