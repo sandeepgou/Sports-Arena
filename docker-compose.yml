@@ -3,14 +3,14 @@ services:
   mongoservice:
     image: mongo:latest
     container_name: mongo-container
-    hostname: localhost
+    #hostname: localhost
     
     ports:
       - 27017:27017
 
   mysql:
     image: mysql:latest
-    hostname: localhost
+    #hostname: localhost
     
     ports:
       - 3306:3306
@@ -25,7 +25,7 @@ services:
   product-webapp:
     container_name: product-webapp
     build: product-webapp/
-    hostname: localhost
+    #hostname: localhost
     
     depends_on:
       - config-server
@@ -38,7 +38,7 @@ services:
   config-server:
     container_name: config-server
     build: config-server/
-    hostname: localhost
+    #hostname: localhost
     
     ports:
       - 8888:8888
@@ -47,7 +47,7 @@ services:
   eureka-server:
     container_name: eureka-server
     build: eureka-server/
-    hostname: localhost
+    #hostname: localhost
     
     depends_on:
       - config-server
@@ -59,7 +59,7 @@ services:
     image: api-gateway
     build: api-gateway/
     restart: always
-    hostname: localhost
+    #hostname: localhost
     
     depends_on:
       - eureka-server
@@ -71,7 +71,7 @@ services:
   payment:
     container_name: payment
     build: payment/
-    hostname: localhost
+    #hostname: localhost
     
     depends_on:
       - eureka-server
@@ -85,7 +85,7 @@ services:
   bookings-management:
     container_name: bookings-management
     build: bookings-management/
-    hostname: localhost
+    #hostname: localhost
     
     ports:
       - 8087:8087
@@ -100,7 +100,7 @@ services:
   authentication-service:
     container_name: authentication-service
     build: authentication-service/
-    hostname: localhost
+    #hostname: localhost
     
     ports:
       - 8095:8095
@@ -116,7 +116,7 @@ services:
   chat-service:
     container_name: chat-service
     build: chat-service/
-    hostname: localhost
+    #hostname: localhost
     
     ports:
       - 8086:8086
@@ -129,7 +129,7 @@ services:
   email-service:
     container_name: email-service
     build: email-service/
-    hostname: localhost
+    #hostname: localhost
     
     ports:
       - 8085:8085
@@ -144,7 +144,7 @@ services:
   team-up:
     container_name: team-up
     build: team-up/
-    hostname: localhost
+    #hostname: localhost
     
     ports:
       - 8082:8082
@@ -159,7 +159,7 @@ services:
   user-service:
     container_name: user-service
     build: user-service/
-    hostname: localhost
+    #hostname: localhost
     
     ports:
       - 8081:8081
