@@ -28,7 +28,7 @@ services:
     hostname: localhost
     
     depends_on:
-      # - config-server
+      - config-server
       - eureka-server
     ports:
       - 8083:8083
@@ -49,8 +49,8 @@ services:
     build: eureka-server/
     hostname: localhost
     
-    # depends_on:
-      # - config-server
+    depends_on:
+      - config-server
     ports:
       - 8761:8761
     restart: always
