@@ -92,7 +92,7 @@ spring:
 
         #Route Mapping
         - id: product-webapp
-          uri: http://34.201.191.117:3000/
+          uri: http://34.201.191.117:8083/
           predicates:
             - Path=/**
           filters:
