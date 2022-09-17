@@ -25,7 +25,7 @@ services:
   product-webapp:
     container_name: product-webapp
     build: product-webapp/
-    hostname: localhost
+    hostname: 34.201.191.117
     
     depends_on:
       # - config-server
