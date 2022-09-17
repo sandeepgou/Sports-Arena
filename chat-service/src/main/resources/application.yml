@@ -10,7 +10,7 @@ spring:
     name: chat-service
   cloud:
     config:
-      uri: http://localhost:8888
+      uri: http://34.201.191.117:8888
       import-check.enabled: false
 management:
   security:
