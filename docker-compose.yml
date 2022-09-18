@@ -42,7 +42,7 @@ services:
   config-server:
     container_name: config-server
     build: config-server/
-    hostname: localhost
+    hostname: 34.201.191.117
     
     ports:
       - 8888:8888
