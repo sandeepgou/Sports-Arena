@@ -27,9 +27,13 @@ services:
     build: product-webapp/
     hostname: localhost
     
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      
     depends_on:
       - config-server
       - eureka-server
+    
     ports:
       - 8083:8083
     restart: always
@@ -61,6 +65,9 @@ services:
     restart: always
     hostname: localhost
     
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      
     depends_on:
       - eureka-server
       - config-server
@@ -73,6 +80,9 @@ services:
     build: payment/
     hostname: localhost
     
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      
     depends_on:
       - eureka-server
       - config-server
@@ -87,6 +97,9 @@ services:
     build: bookings-management/
     hostname: localhost
     
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      
     ports:
       - 8087:8087
     depends_on:
@@ -102,6 +115,9 @@ services:
     build: authentication-service/
     hostname: localhost
     
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      
     ports:
       - 8095:8095
     depends_on:
@@ -118,6 +134,9 @@ services:
     build: chat-service/
     hostname: localhost
     
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      
     ports:
       - 8086:8086
     depends_on:
@@ -131,6 +150,9 @@ services:
     build: email-service/
     hostname: localhost
     
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      
     ports:
       - 8085:8085
     depends_on:
@@ -146,6 +168,9 @@ services:
     build: team-up/
     hostname: localhost
     
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      
     ports:
       - 8082:8082
     depends_on:
@@ -161,6 +186,9 @@ services:
     build: user-service/
     hostname: localhost
     
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      
     ports:
       - 8081:8081
     depends_on:
