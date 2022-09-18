@@ -47,7 +47,7 @@ services:
   eureka-server:
     container_name: eureka-server
     build: eureka-server/
-    hostname: localhost
+    hostname: 34.201.191.117
     
     depends_on:
       - config-server
