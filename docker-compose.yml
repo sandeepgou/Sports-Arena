@@ -28,7 +28,7 @@ services:
     hostname: localhost
     
     depends_on:
-      # - config-server
+      - config-server
       - eureka-server
     ports:
       - 8083:8083
@@ -63,7 +63,7 @@ services:
     
     depends_on:
       - eureka-server
-      # - config-server
+      - config-server
     ports:
       - 8080:8080
 
@@ -75,7 +75,7 @@ services:
     
     depends_on:
       - eureka-server
-      # - config-server
+      - config-server
     ports:
       - 8084:8084
     restart: always
@@ -92,7 +92,7 @@ services:
     depends_on:
       - mongoservice
       - eureka-server
-      # - config-server
+      - config-server
       - rabbitmq
     restart: always
 
@@ -107,7 +107,7 @@ services:
     depends_on:
       - mysql
       - eureka-server
-      # - config-server
+      - config-server
       - rabbitmq
     restart: always
 
@@ -123,7 +123,7 @@ services:
     depends_on:
       - mongoservice
       - eureka-server
-      # - config-server
+      - config-server
     restart: always
 
   email-service:
@@ -135,7 +135,7 @@ services:
       - 8085:8085
     depends_on:
       - eureka-server
-      # - config-server
+      - config-server
       - rabbitmq
       - api-gateway
     restart: always
@@ -150,7 +150,7 @@ services:
       - 8082:8082
     depends_on:
       - eureka-server
-      # - config-server
+      - config-server
       - rabbitmq
       - api-gateway
       - mongoservice
@@ -166,7 +166,7 @@ services:
     depends_on:
       - mongoservice
       - eureka-server
-      # - config-server
+      - config-server
       - rabbitmq
       - api-gateway
     restart: always
