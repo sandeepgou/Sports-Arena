@@ -28,14 +28,12 @@ services:
     hostname: localhost
     
     environment:
-      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      - eureka.client.service-url.defaultZone=http://localhost:8761/eureka
       
     depends_on:
       # - config-server
       - eureka-server
-    links:
-      # - config-server
-      - eureka-server
+
 
     ports:
       - 8083:8083
@@ -58,9 +56,7 @@ services:
     
     # depends_on:
       # - config-server
-    
-    # links:
-      # - config-server
+
 
     ports:
       - 8761:8761
@@ -73,15 +69,12 @@ services:
     hostname: localhost
     
     environment:
-      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      - eureka.client.service-url.defaultZone=http://localhost:8761/eureka
       
     depends_on:
       - eureka-server
       # - config-server
-      
-    links:
-      # - config-server
-      - eureka-server
+
 
     ports:
       - 8080:8080
@@ -93,15 +86,11 @@ services:
     hostname: localhost
     
     environment:
-      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      - eureka.client.service-url.defaultZone=http://localhost:8761/eureka
       
     depends_on:
       - eureka-server
       # - config-server
-      
-    links:
-      # - config-server
-      - eureka-server
 
     ports:
       - 8084:8084
@@ -115,17 +104,11 @@ services:
     hostname: localhost
     
     environment:
-      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      - eureka.client.service-url.defaultZone=http://localhost:8761/eureka
       
     ports:
       - 8087:8087
     depends_on:
-      - mongoservice
-      - eureka-server
-      # - config-server
-      - rabbitmq
-    
-    links:
       - mongoservice
       - eureka-server
       # - config-server
@@ -140,7 +123,7 @@ services:
     hostname: localhost
     
     environment:
-      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      - eureka.client.service-url.defaultZone=http://localhost:8761/eureka
       
     ports:
       - 8095:8095
@@ -150,11 +133,7 @@ services:
       # - config-server
       - rabbitmq
       
-    links:
-      - mysql
-      - eureka-server
-      # - config-server
-      - rabbitmq
+
       
     restart: always
 
@@ -166,7 +145,7 @@ services:
     hostname: localhost
     
     environment:
-      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      - eureka.client.service-url.defaultZone=http://localhost:8761/eureka
       
     ports:
       - 8086:8086
@@ -174,11 +153,7 @@ services:
       - mongoservice
       - eureka-server
       # - config-server
-      
-    links:
-      - mongoservice
-      - eureka-server
-      # - config-server
+
       
     restart: always
 
@@ -188,7 +163,7 @@ services:
     hostname: localhost
     
     environment:
-      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      - eureka.client.service-url.defaultZone=http://localhost:8761/eureka
       
     ports:
       - 8085:8085
@@ -197,13 +172,7 @@ services:
       # - config-server
       - rabbitmq
       - api-gateway
-      
-    links:
-      - eureka-server
-      # - config-server
-      - rabbitmq
-      - api-gateway
-      
+
     restart: always
 
 
@@ -213,7 +182,7 @@ services:
     hostname: localhost
     
     environment:
-      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      - eureka.client.service-url.defaultZone=http://localhost:8761/eureka
       
     ports:
       - 8082:8082
@@ -223,13 +192,7 @@ services:
       - rabbitmq
       - api-gateway
       - mongoservice
-      
-    links:
-      - eureka-server
-      # - config-server
-      - rabbitmq
-      - api-gateway
-      - mongoservice
+
       
     restart: always
 
@@ -239,7 +202,7 @@ services:
     hostname: localhost
     
     environment:
-      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
+      - eureka.client.service-url.defaultZone=http://localhost:8761/eureka
       
     ports:
       - 8081:8081
@@ -249,13 +212,7 @@ services:
       # - config-server
       - rabbitmq
       - api-gateway
-      
-    links:
-      - eureka-server
-      # - config-server
-      - rabbitmq
-      - api-gateway
-      - mongoservice
+  
       
     restart: always
 
