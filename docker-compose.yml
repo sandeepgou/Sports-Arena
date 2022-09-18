@@ -113,7 +113,7 @@ services:
   authentication-service:
     container_name: authentication-service
     build: authentication-service/
-    hostname: localhost
+    hostname: 34.201.191.117
     
     environment:
       - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka
