@@ -3,9 +3,9 @@ server:
 spring:
   application:
     name: payment
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://34.201.191.117:8761/eureka
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: http://34.201.191.117:8761/eureka
