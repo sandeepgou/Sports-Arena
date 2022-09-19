@@ -26,7 +26,7 @@ spring:
       routes:
         #Route Mapping
         - id: authentication-service
-          uri: http://localhost:8095/
+          uri: http://34.201.191.117:8095/
           predicates:
             - Path=/authentication/**
           filters:
@@ -34,7 +34,7 @@ spring:
 
             #Route Mapping
         - id: bookings-management
-          uri: http://localhost:8087/
+          uri: http://34.201.191.117:8087/
           predicates:
             - Path=/booking-Management/**
           filters:
@@ -42,7 +42,7 @@ spring:
 
         #Route Mapping
         - id: chat-service
-          uri: http://localhost:8086/
+          uri: http://34.201.191.117:8086/
           predicates:
             - Path=/chat/**
           filters:
@@ -50,7 +50,7 @@ spring:
 
         #Route Mapping
         - id: email-service
-          uri: http://localhost:8085/
+          uri: http://34.201.191.117:8085/
           predicates:
             - Path=/email/**
           filters:
@@ -59,7 +59,7 @@ spring:
 
         #Route Mapping
         - id: payment
-          uri: http://localhost:8084/
+          uri: http://34.201.191.117:8084/
           predicates:
             - Path=/payment/**
           filters:
@@ -67,7 +67,7 @@ spring:
 
         #Route Mapping
         - id: team-up
-          uri: http://localhost:8082/
+          uri: http://34.201.191.117:8082/
           predicates:
             - Path=/team/**
           filters:
@@ -75,7 +75,7 @@ spring:
 
         #Route Mapping
         - id: user-service
-          uri: http://localhost:8081/
+          uri: http://34.201.191.117:8081/
           predicates:
             - Path=/user/**
           filters:
@@ -83,7 +83,7 @@ spring:
 
         #Route Mapping
         - id: config-server
-          uri: http://localhost:8888/
+          uri: http://34.201.191.117:8888/
           predicates:
             - Path=/config/**
           filters:
@@ -92,7 +92,7 @@ spring:
 
         #Route Mapping
         - id: product-webapp
-          uri: http://localhost:8083/
+          uri: http://34.201.191.117:8083/
           predicates:
             - Path=/**
           filters:
