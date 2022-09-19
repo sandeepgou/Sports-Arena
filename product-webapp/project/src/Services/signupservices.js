@@ -30,7 +30,7 @@ import axios from "axios";
 //     })
 // }
 export function postData(type, formValues,callback,  errorcallback){
-    axios.post(`https://sportsarena.stackroute.io/user/api/v1/${type}`,formValues)
+    axios.post(`https://34.201.191.117:8095/user/api/v1/${type}`,formValues)
     .then(res => {
       //do something
       if(callback != null){
