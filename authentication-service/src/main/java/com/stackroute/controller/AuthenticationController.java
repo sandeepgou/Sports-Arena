@@ -4,10 +4,8 @@ import com.stackroute.entity.User;
 import com.stackroute.exception.UserNotFoundException;
 import com.stackroute.security.SecurityTokenGeneratorImpl;
 import com.stackroute.service.AuthenticationServiceImpl;
-//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-//import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 import java.util.Map;
@@ -20,8 +18,8 @@ public class AuthenticationController {
     public AuthenticationServiceImpl service;
     @Autowired
     public SecurityTokenGeneratorImpl securityTokenGenerator;
-    @Autowired
-    public ResponseEntity responseEntity ;
+
+    ResponseEntity responseEntity ;
 
     //dummy registration handler
  /*   @PostMapping("/register")
@@ -44,14 +42,14 @@ public class AuthenticationController {
             if(user1.getUserEmail().equalsIgnoreCase(user.getUserEmail()) && user1.getPassword().equalsIgnoreCase(user.getPassword())) {
                 map = securityTokenGenerator.generateToken(user);
                 if(!map.isEmpty()){
-                    responseEntity=new ResponseEntity(map,HttpStatus.OK);
+                    ResponseEntity responseEntity=new ResponseEntity(map,HttpStatus.OK);
                 }else{
-                    responseEntity = new ResponseEntity("Error",HttpStatus.BAD_REQUEST);
+                    ResponseEntity responseEntity = new ResponseEntity("Error",HttpStatus.BAD_REQUEST);
                 }
             }
         }catch(Exception ex){
             ex.printStackTrace();
-            responseEntity = new ResponseEntity("Error",HttpStatus.BAD_REQUEST);
+            ResponseEntity responseEntity = new ResponseEntity("Error",HttpStatus.BAD_REQUEST);
         }
         return responseEntity;
     }

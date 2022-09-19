@@ -21,7 +21,7 @@ public class SecurityTokenGeneratorImpl implements SecurityTokenGenerator {
     private String SECRET_KEY="secret";
 
     @Autowired
-private CustomUserDetailsService customUserDetailsService;
+    private CustomUserDetailsService customUserDetailsService;
 
     @Override
     public Map<String, String> generateToken(User user) {

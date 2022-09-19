@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class AuthenticationServiceImpl implements AuthenticationService {
     @Autowired
-public UserRepository userRepository;
+    public UserRepository userRepository;
     UserDTO userDTO = new UserDTO();
     public AuthenticationServiceImpl(UserRepository userRepository) {
         this.userRepository=userRepository;
