@@ -33,8 +33,7 @@ services:
     depends_on:
       # - config-server
       - eureka-server
-      - authentication-service
-      - rabbitmq
+      
 
 
     ports:
