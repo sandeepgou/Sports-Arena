@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const baseURL = "https://sportsarena.stackroute.io/booking-Management";
-const paymentURL = "https://sportsarena.stackroute.io/payment";
+const baseURL = "http://34.201.191.117:8080/booking-Management";
+const paymentURL = "http://34.201.191.117:8080/payment";
 export function getPlayerBookingsAll(name,value, type, callback, errorcallback) {
   axios.get(`${baseURL}/${type}?${name}=${value}`)
     .then(res => {

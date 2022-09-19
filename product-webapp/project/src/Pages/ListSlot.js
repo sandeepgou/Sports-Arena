@@ -31,7 +31,7 @@ function ListSlot() {
     }
     const listSubmit = () => {
 
-        axios.get(`https://sportsarena.stackroute.io/booking-Management/api/v1/slotslist/groundID/`+sessionStorage.getItem("groundID"))
+        axios.get(`http://34.201.191.117:8080/booking-Management/api/v1/slotslist/groundID/`+sessionStorage.getItem("groundID"))
         .then((res)=>{
             var listdetails = res.data;
             // console.log(listdetails)
@@ -79,7 +79,7 @@ function ListSlot() {
     const slot_delete = (slotId) => {
       console.log("inside delete function");
       axios
-        .delete(`https://sportsarena.stackroute.io/booking-Management/api/v1/slot/slotID/${slotId}`)
+        .delete(`http://34.201.191.117:8080/booking-Management/api/v1/slot/slotID/${slotId}`)
         .then((response) => {
           listSubmit();
           console.log(response);

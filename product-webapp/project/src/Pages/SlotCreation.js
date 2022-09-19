@@ -67,7 +67,7 @@ function SlotCreation() {
 
         console.log("final Values", formValues);
         axios.
-            post(`https://sportsarena.stackroute.io/booking-Management/api/v1/newslot`,
+            post(`http://34.201.191.117:8080/booking-Management/api/v1/newslot`,
                 { groundID: sessionStorage.getItem("groundID"),startTime: formValues.startTime,endTime: formValues.endTime,status: formValues.status,slotDate: formValues.slotDate })
             .then((response) => {
                 console.log(response);
