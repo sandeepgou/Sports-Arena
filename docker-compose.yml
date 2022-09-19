@@ -212,8 +212,7 @@ services:
       # - config-server
       - rabbitmq
       - api-gateway
-  
-      
+      -
     restart: always
 
   rabbitmq:

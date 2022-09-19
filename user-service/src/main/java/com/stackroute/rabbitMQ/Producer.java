@@ -8,7 +8,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Producer {
+    @Autowired
     private RabbitTemplate rabbitTemplate;
+    @Autowired
     private DirectExchange exchange;
 
     @Autowired
