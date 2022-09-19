@@ -85,7 +85,7 @@ const sortedList=(list)=>{
 // console.log(location.state.id);
 const getdetailview = () => {
   console.log("id");
-    axios.get(`https://sportsarena.stackroute.io/user/api/v1/ground/groundID/`+location.state.groundID)
+    axios.get(`http://34.201.191.117:8081/user/api/v1/ground/groundID/`+location.state.groundID)
     .then((res)=>{
         // console.log(res.data[0]);
         let values=[];

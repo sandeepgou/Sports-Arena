@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export function postData(formValues, callback, errorcallback){
-  axios.post("http://localhost:8095/authentication/api/v1/userauth",formValues)
+  axios.post("http://34.201.191.117:8095/authentication/api/v1/userauth",formValues)
   .then(res => {
     //do something
     if(callback != null){
