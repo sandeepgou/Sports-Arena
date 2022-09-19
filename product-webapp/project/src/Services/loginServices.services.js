@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export function postData(formValues, callback, errorcallback){
-  axios.post("https://localhost:8095/authentication/api/v1/userauth",formValues)
+  axios.post("https://sportsarena.stackroute.io:8095/authentication/api/v1/userauth",formValues)
   .then(res => {
     //do something
     if(callback != null){
