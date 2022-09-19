@@ -19,7 +19,8 @@ public class AuthenticationController {
     public AuthenticationServiceImpl service;
     @Autowired
     public SecurityTokenGeneratorImpl securityTokenGenerator;
-    ResponseEntity responseEntity ;
+    @Autowired
+    public ResponseEntity responseEntity ;
 
     //dummy registration handler
  /*   @PostMapping("/register")
