@@ -66,6 +66,7 @@ services:
   api-gateway:
     image: api-gateway
     build: api-gateway/
+    container_name: api-gateway
     restart: always
     hostname: localhost
     
