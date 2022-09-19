@@ -33,11 +33,9 @@ services:
     depends_on:
       # - config-server
       - eureka-server
-      
-
 
     ports:
-      - 8083:8083
+      - 3000:3000
     restart: always
 
 
