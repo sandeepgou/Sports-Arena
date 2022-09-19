@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://sportsarena.stackroute.io/user";
+const baseURL = "https://localhost:8095/user";
 export function getData( callback, errorcallback) {
   axios.get(`${baseURL}/api/v1/player/userEmail/`+sessionStorage.getItem("email"))
     .then(res => {
