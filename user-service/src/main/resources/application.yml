@@ -11,7 +11,7 @@ spring:
     name: user-service
   data: 
     mongodb: 
-      database: userservice_db
+      database: players
       host: localhost
       port: 27017
   datasource: 
