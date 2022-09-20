@@ -1,5 +1,5 @@
 package com.stackroute.player.Service;
-import com.stackroute.player.Repository.PlayerRepository;
+import com.stackroute.player.model.Repository.PlayerRepository;
 import com.stackroute.player.custom.exception.UserAlreadyExistException;
 import com.stackroute.player.model.Player;
 
@@ -22,7 +22,7 @@ public class PlayerServiceImpl implements PlayerService {
         UserDTO userdto=new UserDTO();
         userdto.setUserEmail(player.getUserEmail());
         userdto.setPassword(player.getPassword());
-        userdto.setRole("newplayer");
+        userdto.setRole(player.getRole());
         if(playerRepository.existsById(player.getUserEmail()))
         {
             System.out.println(playerRepository.findById(player.getUserEmail()));

@@ -1,4 +1,4 @@
-package com.stackroute.player.Repository;
+package com.stackroute.player.model.Repository;
 
 import com.stackroute.player.model.Player;
 import org.springframework.data.mongodb.repository.MongoRepository;
