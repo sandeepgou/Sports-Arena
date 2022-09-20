@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL= "https://34.201.191.117:8095/user";
+const baseURL= "http://34.201.191.117:8080/user";
 export function getGroundList( callback, errorcallback) {
     // const url = `${baseURL}/${type}`;
     // console.log(url);
