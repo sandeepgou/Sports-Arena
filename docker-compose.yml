@@ -27,8 +27,8 @@ services:
     build: product-webapp/
     hostname: localhost
     
-    environment:
-      - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
+    #environment:
+    # - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
       
     depends_on:
       # - config-server
@@ -83,8 +83,8 @@ services:
     build: payment/
     hostname: localhost
     
-    environment:
-      - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
+    # environment:
+    #   - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
       
     depends_on:
       - eureka-server
@@ -101,8 +101,8 @@ services:
     build: bookings-management/
     hostname: localhost
     
-    environment:
-      - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
+    #environment:
+    #  - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
       
     ports:
       - 8087:8087
@@ -120,8 +120,8 @@ services:
     build: authentication-service/
     hostname: localhost
     
-    environment:
-      - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
+    #environment:
+    #  - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
       
     ports:
       - 8095:8095
@@ -130,9 +130,7 @@ services:
       - eureka-server
       # - config-server
       - rabbitmq
-      
 
-      
     restart: always
 
 
@@ -142,8 +140,8 @@ services:
     build: chat-service/
     hostname: localhost
     
-    environment:
-      - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
+    #environment:
+    #  - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
       
     ports:
       - 8086:8086
@@ -160,8 +158,8 @@ services:
     build: email-service/
     hostname: localhost
     
-    environment:
-      - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
+    #environment:
+    #  - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
       
     ports:
       - 8085:8085
@@ -179,8 +177,8 @@ services:
     build: team-up/
     hostname: localhost
     
-    environment:
-      - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
+    #environment:
+    #  - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
       
     ports:
       - 8082:8082
@@ -199,8 +197,8 @@ services:
     build: user-service/
     hostname: localhost
     
-    environment:
-      - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
+    #environment:
+    #  - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
       
     ports:
       - 8081:8081
