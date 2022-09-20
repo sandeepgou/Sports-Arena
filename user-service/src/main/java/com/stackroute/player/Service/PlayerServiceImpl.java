@@ -22,7 +22,7 @@ public class PlayerServiceImpl implements PlayerService {
         UserDTO userdto=new UserDTO();
         userdto.setUserEmail(player.getUserEmail());
         userdto.setPassword(player.getPassword());
-        userdto.setRole(player.getRole());
+        userdto.setRole("newplayer");
         if(playerRepository.existsById(player.getUserEmail()))
         {
             System.out.println(playerRepository.findById(player.getUserEmail()));
