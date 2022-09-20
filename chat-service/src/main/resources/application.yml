@@ -16,7 +16,9 @@ management:
   security:
     enabled: false
     
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://34.201.191.117:8761/eureka    
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://34.201.191.117:8761/eureka

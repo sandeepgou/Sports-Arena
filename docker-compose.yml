@@ -68,8 +68,8 @@ services:
     restart: always
     hostname: localhost
     
-    environment:
-      - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
+    # environment:
+    #  - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
       
     depends_on:
       - eureka-server

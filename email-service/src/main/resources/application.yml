@@ -7,14 +7,13 @@ spring:
   mail:
     id: sportsarenaemailservice@gmail.com
     password: hrcrvkrrowwusfcz
-#eureka:
-#  client:
-#    register-with-eureka: true
-#    fetch-registry: true
-#    service-url:
-#      defaultZone: http://34.201.191.117:8761/eureka
 
-
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://34.201.191.117:8761/eureka
 
 # spring:
 #   application:
