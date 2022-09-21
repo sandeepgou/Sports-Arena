@@ -212,7 +212,7 @@ services:
     restart: always
 
   rabbitmq:
-    image: rabbitmq:management
+    image: rabbitmq:3-management
     container_name: rabbitmq
     hostname: 34.201.191.117
     ports:
