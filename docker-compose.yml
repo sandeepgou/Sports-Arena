@@ -214,7 +214,6 @@ services:
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
-    hostname: 34.201.191.117
     ports:
       - "5672:5672"
       - "15672:15672"
