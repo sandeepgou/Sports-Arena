@@ -3,7 +3,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     service-url:
-      defaultZone: http://34.201.191.117:8761/eureka
+      defaultZone: http://3.7.2.2:8761/eureka
 
 server:
   port: 8081
@@ -13,14 +13,14 @@ spring:
   data:
     mongodb:
       database: players
-      host: 34.201.191.117
+      host: 3.7.2.2
       port: 27017
   datasource:
     driver-name: mongodb.jdbc.MongoDriver
 
   rabbitmq:
     port: 5672
-    host: 34.201.191.117
+    host: 3.7.2.2
     username: guest
     password: guest
 

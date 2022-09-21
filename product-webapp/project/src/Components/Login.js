@@ -110,7 +110,7 @@ function Login ({setEmail}) {
             sessionStorage.setItem("role",formValues.role)
              setEmail(formValues.userEmail)
             if(formValues.role==="newground"){
-                axios.get(`http://34.201.191.117:8080/user/api/v1/ground/ownerEmail/`+formValues.userEmail)
+                axios.get(`http://3.7.2.2:8080/user/api/v1/ground/ownerEmail/`+formValues.userEmail)
                 .then((res)=>{
                     sessionStorage.setItem("groundID",res.data.groundID)
                 })
