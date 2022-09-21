@@ -3,7 +3,7 @@ server:
 spring:
   data:
     mongodb:
-      host: localhost
+      host: 34.201.191.117
       port: 27017
       database: chat
   application:

@@ -2,6 +2,6 @@ FROM openjdk:11-jre-slim
 WORKDIR usr/src
 EXPOSE 8095
 ENV MYSQL_USERNAME=root
-ENV MYSQL_PASSWORD=password@123
+ENV MYSQL_PASSWORD=Password@123
 ADD ./target/authentication-service-0.0.1-SNAPSHOT.jar /usr/src/authentication-service-0.0.1-SNAPSHOT.jar
 ENTRYPOINT ["java","-jar","authentication-service-0.0.1-SNAPSHOT.jar"]

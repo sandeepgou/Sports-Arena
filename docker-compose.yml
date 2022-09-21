@@ -4,14 +4,12 @@ services:
     image: mongo:latest
     container_name: mongo-container
     hostname: 34.201.191.117
-    
     ports:
       - 27017:27017
 
   mysql:
     image: mysql:latest
     hostname: 34.201.191.117
-    
     ports:
       - 3306:3306
     container_name: mysqlcontainer
@@ -26,14 +24,9 @@ services:
     container_name: product-webapp
     build: product-webapp/
     hostname: 34.201.191.117
-    
-    #environment:
-    # - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
-      
     depends_on:
       # - config-server
       - eureka-server
-
     ports:
       - 3000:3000
     restart: always
@@ -43,23 +36,21 @@ services:
     container_name: config-server
     build: config-server/
     hostname: 34.201.191.117
-    
     ports:
       - 8888:8888
     restart: always
+
 
   eureka-server:
     container_name: eureka-server
     build: eureka-server/
     hostname: 34.201.191.117
-    
     # depends_on:
       # - config-server
-
-
     ports:
       - 8761:8761
     restart: always
+
 
   api-gateway:
     image: api-gateway
@@ -67,10 +58,7 @@ services:
     container_name: api-gateway
     restart: always
     hostname: 34.201.191.117
-    
-    # environment:
-    #  - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
-      
+
     depends_on:
       - eureka-server
       # - config-server
@@ -82,28 +70,18 @@ services:
     container_name: payment
     build: payment/
     hostname: 34.201.191.117
-    
-    # environment:
-    #   - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
-      
     depends_on:
       - eureka-server
       # - config-server
-
     ports:
       - 8084:8084
     restart: always
-
 
 
   bookings-management:
     container_name: bookings-management
     build: bookings-management/
     hostname: 34.201.191.117
-    
-    #environment:
-    #  - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
-      
     ports:
       - 8087:8087
     depends_on:
@@ -119,10 +97,6 @@ services:
     container_name: authentication-service
     build: authentication-service/
     hostname: 34.201.191.117
-    
-    #environment:
-    #  - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
-      
     ports:
       - 8095:8095
     depends_on:
@@ -139,28 +113,18 @@ services:
     container_name: chat-service
     build: chat-service/
     hostname: 34.201.191.117
-    
-    #environment:
-    #  - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
-      
     ports:
       - 8086:8086
     depends_on:
       - mongoservice
       - eureka-server
       # - config-server
-
-      
     restart: always
 
   email-service:
     container_name: email-service
     build: email-service/
     hostname: 34.201.191.117
-    
-    #environment:
-    #  - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
-      
     ports:
       - 8085:8085
     depends_on:
@@ -168,7 +132,6 @@ services:
       # - config-server
       - rabbitmq
       - api-gateway
-
     restart: always
 
 
@@ -176,10 +139,6 @@ services:
     container_name: team-up
     build: team-up/
     hostname: 34.201.191.117
-    
-    #environment:
-    #  - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
-      
     ports:
       - 8082:8082
     depends_on:
@@ -188,18 +147,13 @@ services:
       - rabbitmq
       - api-gateway
       - mongoservice
-
-      
     restart: always
+
 
   user-service:
     container_name: user-service
     build: user-service/
     hostname: 34.201.191.117
-    
-    #environment:
-    #  - eureka.client.service-url.defaultZone=http://34.201.191.117:8761/eureka
-      
     ports:
       - 8081:8081
     depends_on:

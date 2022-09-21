@@ -10,6 +10,12 @@ spring:
       port: 27017
       database: TeamupDB
 
+  rabbitmq:
+    port: 5672
+    host: 34.201.191.117
+    username: guest
+    password: guest
+
 eureka:
   client:
     registerWithEureka: true
