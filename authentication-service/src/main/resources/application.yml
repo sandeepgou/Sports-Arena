@@ -40,7 +40,7 @@ eureka:
     service-url:
       defaultZone: http://3.7.2.2:8761/eureka
   instance:
-    hostname: localhost
+    hostname: 3.7.2.2
 
 
 
