@@ -3,14 +3,14 @@ server:
 spring:
   data:
     mongodb:
-      host: 3.7.2.2
+      host: 44.208.58.122
       port: 27017
       database: chat
   application:
     name: chat-service
   cloud:
     config:
-      uri: http://3.7.2.2:8888
+      uri: http://44.208.58.122:8888
       import-check.enabled: false
 management:
   security:
@@ -21,4 +21,4 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     service-url:
-      defaultZone: http://3.7.2.2:8761/eureka
+      defaultZone: http://44.208.58.122:8761/eureka

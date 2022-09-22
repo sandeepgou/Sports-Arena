@@ -59,7 +59,7 @@ const listSubmit = () => {
 //     }).catch(error => {
 //         throw new Error(error);
 //     })
-return axios.get(`http://3.7.2.2:8080/booking-Management/api/v1/slotslist/groundID/`+location.state.groundID)
+return axios.get(`http://44.208.58.122:8080/booking-Management/api/v1/slotslist/groundID/`+location.state.groundID)
  .then((res)=>{
  var listdetails = res.data;
  console.log(listdetails)
@@ -85,7 +85,7 @@ const sortedList=(list)=>{
 // console.log(location.state.id);
 const getdetailview = () => {
   console.log("id");
-    axios.get(`http://3.7.2.2:8080/user/api/v1/ground/groundID/`+location.state.groundID)
+    axios.get(`http://44.208.58.122:8080/user/api/v1/ground/groundID/`+location.state.groundID)
     .then((res)=>{
         // console.log(res.data[0]);
         let values=[];

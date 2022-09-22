@@ -31,7 +31,7 @@ function ListSlot() {
     }
     const listSubmit = () => {
 
-        axios.get(`http://3.7.2.2:8080/booking-Management/api/v1/slotslist/groundID/`+sessionStorage.getItem("groundID"))
+        axios.get(`http://44.208.58.122:8080/booking-Management/api/v1/slotslist/groundID/`+sessionStorage.getItem("groundID"))
         .then((res)=>{
             var listdetails = res.data;
             // console.log(listdetails)
@@ -79,7 +79,7 @@ function ListSlot() {
     const slot_delete = (slotId) => {
       console.log("inside delete function");
       axios
-        .delete(`http://3.7.2.2:8080/booking-Management/api/v1/slot/slotID/${slotId}`)
+        .delete(`http://44.208.58.122:8080/booking-Management/api/v1/slot/slotID/${slotId}`)
         .then((response) => {
           listSubmit();
           console.log(response);

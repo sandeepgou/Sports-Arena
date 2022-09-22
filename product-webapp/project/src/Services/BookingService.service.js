@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const baseURL = "http://3.7.2.2:8080/booking-Management";
-const paymentURL = "http://3.7.2.2:8080/payment";
+const baseURL = "http://44.208.58.122:8080/booking-Management";
+const paymentURL = "http://44.208.58.122:8080/payment";
 export function getPlayerBookingsAll(name,value, type, callback, errorcallback) {
   axios.get(`${baseURL}/${type}?${name}=${value}`)
     .then(res => {

@@ -64,7 +64,7 @@ const ChatFeature = () => {
         //     getdetails()
         // }, 3000)
 
-        axios.get(`http://3.7.2.2:8080/user/api/v1/player/userEmail/${location.state.email}`)
+        axios.get(`http://44.208.58.122:8080/user/api/v1/player/userEmail/${location.state.email}`)
             .then((res) => {
                 console.log(res.data);
                 let values = res.data;

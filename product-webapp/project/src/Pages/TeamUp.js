@@ -29,7 +29,7 @@ function TeamUp() {
   console.log(paginationData);
 
   const filterTeamup = () => {
-    axios.get("http://3.7.2.2:3000/teamup")
+    axios.get("http://44.208.58.122:3000/teamup")
       .then((res) => {
         console.log(res.data)
         setPData(res.data);
@@ -40,7 +40,7 @@ function TeamUp() {
   const filterData = () => {
     setCurrentTab(1);
     axios
-      .get("http://3.7.2.2:8080/user/api/v1/playerlist")
+      .get("http://44.208.58.122:8080/user/api/v1/playerlist")
       .then((res) => {
         console.log(res.data);
          let value=[];
@@ -62,7 +62,7 @@ function TeamUp() {
   async function Team_up(userEmail) {
     console.log(sessionStorage.getItem("email"))
     await axios
-      .post("http://3.7.2.2:8080/team/api/v1/teamup/sendInvite", {
+      .post("http://44.208.58.122:8080/team/api/v1/teamup/sendInvite", {
         senderEmail: sessionStorage.getItem("email"),
         requestedPlayerEmail: userEmail,
         statusOfRequest: "PENDING",
@@ -83,7 +83,7 @@ function TeamUp() {
 
   const deleteid = (id) => {
     console.log(id)
-    axios.delete(`http://3.7.2.2:8080/team/api/v1/teamup/removeinvite/requestId/${id}`)
+    axios.delete(`http://44.208.58.122:8080/team/api/v1/teamup/removeinvite/requestId/${id}`)
       .then((res) => {
         console.log(res);
         sentInviteTab();
@@ -100,7 +100,7 @@ function TeamUp() {
   const updateStatus = (teamup_id) => {
     let statusOfRequest = "ACCEPTED"
     //teamup_id="9df7e8e6-0a17-42a5-b7e8-c47c5c467579";
-    axios.put(`http://3.7.2.2:8080/team/api/v1/teamup/action/requestId/${teamup_id}/requestStatus/${statusOfRequest}`)
+    axios.put(`http://44.208.58.122:8080/team/api/v1/teamup/action/requestId/${teamup_id}/requestStatus/${statusOfRequest}`)
       .then((res) => {
         console.log(res)
         myInvite();
@@ -112,7 +112,7 @@ function TeamUp() {
     setPaginationData([]);
     const reqEmail = sessionStorage.getItem("email");
     axios
-      .get(`http://3.7.2.2:8080/team/api/v1/teamup/requestedPlayerEmail/${reqEmail}`)
+      .get(`http://44.208.58.122:8080/team/api/v1/teamup/requestedPlayerEmail/${reqEmail}`)
       .then((res) => {
         console.log(res.data);
         let invitedatas = [];
@@ -143,7 +143,7 @@ function TeamUp() {
     setPaginationData([]);
     const senderEmail = sessionStorage.getItem("email");
     axios
-      .get(`http://3.7.2.2:8080/team/api/v1/teamup/senderEmail/${senderEmail}`)
+      .get(`http://44.208.58.122:8080/team/api/v1/teamup/senderEmail/${senderEmail}`)
       .then((res) => {
         console.clear();
         // console.log("MyInvites", res.data);

@@ -6,13 +6,13 @@ spring:
     name: team-up
   data:
     mongodb:
-      host: 3.7.2.2
+      host: 44.208.58.122
       port: 27017
       database: TeamupDB
 
   rabbitmq:
     port: 5672
-    host: 3.7.2.2
+    host: 44.208.58.122
     username: guest
     password: guest
 
@@ -21,7 +21,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     service-url:
-      defaultZone: http://3.7.2.2:8761/eureka
+      defaultZone: http://44.208.58.122:8761/eureka
 
 # spring:
 #   application:
