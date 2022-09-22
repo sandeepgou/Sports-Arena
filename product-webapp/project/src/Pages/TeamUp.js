@@ -29,7 +29,7 @@ function TeamUp() {
   console.log(paginationData);
 
   const filterTeamup = () => {
-    axios.get("http://localhost:3000/teamup")
+    axios.get("http://3.7.2.2:3000/teamup")
       .then((res) => {
         console.log(res.data)
         setPData(res.data);

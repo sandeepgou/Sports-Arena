@@ -6,7 +6,7 @@ spring:
     name: team-up
   data:
     mongodb:
-      host: localhost
+      host: 3.7.2.2
       port: 27017
       database: TeamupDB
 

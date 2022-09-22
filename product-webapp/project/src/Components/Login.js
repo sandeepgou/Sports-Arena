@@ -47,7 +47,7 @@ function Login ({setEmail}) {
             if (formValues.role === "players") {
               
                 axios
-                    .get("http://localhost:3000/players/2")
+                    .get("http://3.7.2.2:3000/players/2")
                     .then((response) => {
                         // console.log(response.data);
 
@@ -61,7 +61,7 @@ function Login ({setEmail}) {
                     .then(() => { });
             } else if(formValues.role === "vendors") {
                 axios
-                .get("http://localhost:3000/vendors/1")
+                .get("http://3.7.2.2:3000/vendors/1")
                 .then((response) => {
                     // console.log(response.data);
                    let values= response.data;
