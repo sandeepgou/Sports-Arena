@@ -23,6 +23,8 @@ services:
   product-webapp:
     container_name: product-webapp
     build: product-webapp/
+    image: butler123/sports:product-webapp
+
     hostname: 44.208.58.122
     depends_on:
       # - config-server
@@ -35,6 +37,8 @@ services:
   config-server:
     container_name: config-server
     build: config-server/
+    image: butler123/sports:config-server
+
     hostname: 44.208.58.122
     ports:
       - 8888:8888
@@ -44,6 +48,7 @@ services:
   eureka-server:
     container_name: eureka-server
     build: eureka-server/
+    image: butler123/sports:eureka-server
     hostname: 44.208.58.122
     # depends_on:
       # - config-server
@@ -53,8 +58,8 @@ services:
 
 
   api-gateway:
-    image: api-gateway
     build: api-gateway/
+    image: butler123/sports:api-gateway
     container_name: api-gateway
     restart: always
     hostname: 44.208.58.122
@@ -69,6 +74,7 @@ services:
   payment:
     container_name: payment
     build: payment/
+    image: butler123/sports:payment
     hostname: 44.208.58.122
     depends_on:
       - eureka-server
@@ -81,6 +87,7 @@ services:
   bookings-management:
     container_name: bookings-management
     build: bookings-management/
+    image: butler123/sports:bookings-management
     hostname: 44.208.58.122
     ports:
       - 8087:8087
@@ -96,6 +103,7 @@ services:
   authentication-service:
     container_name: authentication-service
     build: authentication-service/
+    image: butler123/sports:authentication-service
     hostname: 44.208.58.122
     ports:
       - 8095:8095
@@ -112,6 +120,7 @@ services:
   chat-service:
     container_name: chat-service
     build: chat-service/
+    image: butler123/sports:chat-service
     hostname: 44.208.58.122
     ports:
       - 8086:8086
@@ -124,6 +133,7 @@ services:
   email-service:
     container_name: email-service
     build: email-service/
+    image: butler123/sports:email-service
     hostname: 44.208.58.122
     ports:
       - 8085:8085
@@ -138,6 +148,7 @@ services:
   team-up:
     container_name: team-up
     build: team-up/
+    image: butler123/sports:team-up
     hostname: 44.208.58.122
     ports:
       - 8082:8082
@@ -153,6 +164,7 @@ services:
   user-service:
     container_name: user-service
     build: user-service/
+    image: butler123/sports:user-service
     hostname: 44.208.58.122
     ports:
       - 8081:8081
